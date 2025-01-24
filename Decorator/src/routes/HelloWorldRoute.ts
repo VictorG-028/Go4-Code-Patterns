@@ -19,13 +19,13 @@ const router = Router();
 
 
 ////////////////////////////////////////////////////////////////////////////////
-
+////// Arquivo de rotas com hardcode (sem decorator)
 
 // Hardcoded logics for each possible way to call the controller
 import Problematic_HelloWorldController from '../controllers/problematic_code/Problematic_HelloWorldController';
-import BasicAuth_HelloWorldController from '../controllers/problematic_code/BasicAuth_HelloWorldController';
-import Permission_HelloWorldController from '../controllers/problematic_code/Permission_HelloWorldController';
-import BasicAuth_Permission_HelloWorldController from '../controllers/problematic_code/BasicAuth_Permission_HelloWorldController';
+import BasicAuth_HelloWorldController from '../controllers/problematic_code/Problematic_BasicAuth_HelloWorldController';
+import Permission_HelloWorldController from '../controllers/problematic_code/Problematic_HasPermission_HelloWorldController';
+import BasicAuth_Permission_HelloWorldController from '../controllers/problematic_code/Problematic_BasicAuth_HasPermission_HelloWorldController';
 
 
 const helloWorld_Controller = new Problematic_HelloWorldController();
@@ -53,8 +53,9 @@ router.get(
 );
 
 
-////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+////// Arquivo de rotas com decorator
 
 import HelloWorldController from '../controllers/solution_code/HelloWorldController';
 import BasicAuthMiddleware from '../middlewares/BasicAuthMiddleware';

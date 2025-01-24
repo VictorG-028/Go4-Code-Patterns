@@ -21,7 +21,6 @@ class CheckPermissionMiddleware implements Middleware {
 
   private static async checkPermission(req: Request, res: Response, sharedState: SharedState): Promise<boolean> {
     const wantsTo = req.headers['wants-to'];
-    console.log(req.headers);
     const user = sharedState['user'];
 
     if (!wantsTo) {
